@@ -6,6 +6,13 @@ Home page:    <https://metacpan.org/release/MooseX-XSAccessor>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.000_02  2013-06-14
+
+ - (Addition) MooseX::XSAccessor::is_xs function.
+ - (Bugfix) Work around some edge cases.
+ - (Documentation) Better documentation.
+ - (Packaging) Better test cases.
+
 0.000_01  2013-06-14  # Developer release
 
 

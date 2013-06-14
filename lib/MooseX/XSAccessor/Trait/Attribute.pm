@@ -6,11 +6,20 @@ use warnings;
 
 use Class::XSAccessor 1.16 ();
 use Scalar::Util qw(reftype);
+use B qw(perlstring);
 
 BEGIN {
 	$MooseX::XSAccessor::Trait::Attribute::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::XSAccessor::Trait::Attribute::VERSION   = '0.000_01';
+	$MooseX::XSAccessor::Trait::Attribute::VERSION   = '0.000_02';
 }
+
+# Map Moose terminology to Class::XSAccessor options.
+my %class_xsaccessor_opt = (
+	accessor   => "accessors",
+	reader     => "getters",
+	writer     => "setters",
+	predicate  => "predicates",
+);
 
 use Moose::Role;
 
@@ -56,13 +65,6 @@ sub clearer_is_simple
 	!!0;
 }
 
-my %class_xsaccessor_opt = (
-	accessor   => "accessors",
-	reader     => "getters",
-	writer     => "setters",
-	predicate  => "predicates",
-);
-
 override install_accessors => sub {
 	my $self = shift;
 	my ($inline) = @_;
@@ -71,6 +73,13 @@ override install_accessors => sub {
 	my $classname = $class->name;
 	my $is_hash   = reftype($class->get_meta_instance->create_instance) eq q(HASH);
 	my $ok        = $is_hash && $class->get_meta_instance->is_inlinable;
+	
+	# Use inlined get method as a heuristic to detect weird shit.
+	if ($ok)
+	{
+		my $inline_get = $self->_inline_instance_get('$X');
+		$ok = !!0 if $inline_get ne sprintf('$X->{%s}', perlstring($self->name));
+	}
 	
 	for my $m (qw/ accessor reader writer predicate clearer /)
 	{
@@ -93,7 +102,8 @@ override install_accessors => sub {
 				$class_xsaccessor_opt{$m} => +{ $methodname => $self->name },
 			);
 			# Naughty!
-			$metamethod->{"body"} = $classname->can($methodname);
+			no strict "refs";
+			$metamethod->{"body"} = \&{"$classname\::$methodname"};
 		}
 	}
 	
@@ -170,7 +180,6 @@ This software is copyright (c) 2013 by Toby Inkster.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
 
 =head1 DISCLAIMER OF WARRANTIES
 

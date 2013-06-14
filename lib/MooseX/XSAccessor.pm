@@ -6,10 +6,11 @@ use warnings;
 
 use Moose 2.0600 ();
 use MooseX::XSAccessor::Trait::Attribute ();
+use Scalar::Util qw(blessed);
 
 BEGIN {
 	$MooseX::XSAccessor::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::XSAccessor::VERSION   = '0.000_01';
+	$MooseX::XSAccessor::VERSION   = '0.000_02';
 }
 
 use Moose::Exporter;
@@ -27,13 +28,35 @@ sub init_meta
 	);
 }
 
+sub is_xs
+{
+	my $sub = $_[0];
+	
+	if (blessed($sub) and $sub->isa("Class::MOP::Method"))
+	{
+		$sub = $sub->body;
+	}
+	elsif (not ref $sub)
+	{
+		no strict "refs";
+		$sub = \&{$sub};
+	}
+	
+	# Best heuristic I could find. B::Deparse does a shoddy job
+	# deparsing XSUBs.
+	#
+	require B::Deparse;
+	my $text = B::Deparse->new->coderef2text($sub);
+	return ($text eq ";");
+}
+
 1;
 
 __END__
 
 =pod
 
-=for stopwords Auto-deref
+=for stopwords Auto-deref Mouse/Class::XSAccessor
 
 =encoding utf-8
 
@@ -101,6 +124,25 @@ Weak references
 An C<rw> accessor is effectively a reader and a writer glued together, so
 both of the above lists apply.
 
+=head2 Functions
+
+This module also provides one function, which is not exported so needs to be
+called by its full name.
+
+=over
+
+=item C<< MooseX::XSAccessor::is_xs($sub) >>
+
+Returns a boolean indicating whether a sub is an XSUB. This uses some
+heuristics, and may not always be reliable, but seems to work OK
+differentiating Moose/Moo Perl accessors, from Mouse/Class::XSAccessor
+XS accessors.
+
+C<< $sub >> may be a coderef, L<Class::MOP::Method> object, or a qualified
+sub name as a string (e.g. C<< "MyClass::foo" >>).
+
+=back
+
 =head1 HINTS
 
 =over
@@ -136,6 +178,18 @@ trait directly:
       ...,
    );
 
+=item *
+
+If you don't want to add a dependency on MooseX::XSAccessor, but do want to
+use it if it's available, the following code will use it optionally:
+
+   package MyClass;
+   
+   use Moose;
+   BEGIN { eval "use MooseX::XSAccessor" };
+   
+   has foo => (...);
+
 =back
 
 =head1 CAVEATS
@@ -161,11 +215,14 @@ this situation. See L<https://rt.cpan.org/Ticket/Display.html?id=86127>.
 
 MooseX::XSAccessor does not play nice with attribute traits that alter
 accessor behaviour, or define additional accessors for attributes.
+(L<MooseX::SetOnce> and L<MooseX::Attribute::Chained> are examples
+thereof.)
 
 =item *
 
-MooseX::XSAccessor only works on blessed hashes; not e.g. L<MooseX::ArrayRef>
-or L<MooseX::InsideOut>.
+MooseX::XSAccessor only works on blessed hash storage; not e.g.
+L<MooseX::ArrayRef> or L<MooseX::InsideOut>. MooseX::XSAccessor is
+usually able to detect such situations and silently switch itself off.
 
 =back
 

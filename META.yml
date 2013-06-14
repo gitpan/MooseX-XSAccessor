@@ -36,4 +36,4 @@ resources:
   homepage: https://metacpan.org/release/MooseX-XSAccessor
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-moosex-xsaccessor
-version: 0.000_01
+version: 0.000_02
