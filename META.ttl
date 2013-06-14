@@ -1,0 +1,56 @@
+@prefix cpan: <http://purl.org/NET/cpan-uri/person/> .
+@prefix cpant: <http://purl.org/NET/cpan-uri/terms#> .
+@prefix dbug: <http://ontologi.es/doap-bugs#> .
+@prefix dcs: <http://ontologi.es/doap-changeset#> .
+@prefix dist: <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:r1371185918r0 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "MooseX::XSAccessor" .
+_:r1371185918r1 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "MooseX::XSAccessor" .
+_:r1371185918r2 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
+	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
+	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
+	rdfs:label "MooseX::XSAccessor" .
+_:rb1306BF50D4AF11E2A208042E02A047E6r0 doap:browse <https://github.com/tobyink/p5-moosex-xsaccessor> ;
+	a doap:HgRepository .
+<http://dev.perl.org/licenses/> <http://purl.org/dc/terms/title> "the same terms as the perl 5 programming language system itself" .
+dist:project cpant:perl_version_from _:r1371185918r0 ;
+	cpant:readme_from _:r1371185918r2 ;
+	cpant:requires "Class::XSAccessor 1.16"^^cpant:dsWithVersion, "Moose 2.0600"^^cpant:dsWithVersion ;
+	cpant:test_requires "Import::Into 1.001000"^^cpant:dsWithVersion, "Test::Fatal"^^cpant:dsWithoutVersion, "Test::Moose"^^cpant:dsWithoutVersion, "Test::More 0.96"^^cpant:dsWithVersion, "Test::Requires"^^cpant:dsWithoutVersion ;
+	cpant:version_from _:r1371185918r1 ;
+	<http://purl.org/dc/terms/contributor> cpan:tobyink ;
+	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor> ;
+	doap:created "2013-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:developer cpan:tobyink ;
+	doap:download-page <https://metacpan.org/release/MooseX-XSAccessor> ;
+	doap:homepage <https://metacpan.org/release/MooseX-XSAccessor> ;
+	doap:license <http://dev.perl.org/licenses/> ;
+	doap:maintainer cpan:tobyink ;
+	doap:name "MooseX-XSAccessor" ;
+	doap:programming-language "Perl" ;
+	doap:release dist:v_0-000_01 ;
+	doap:repository _:rb1306BF50D4AF11E2A208042E02A047E6r0 ;
+	doap:shortdesc "use Class::XSAccessor to speed up Moose accessors" ;
+	a doap:Project .
+dist:v_0-000_01 dcs:released-by cpan:tobyink ;
+	<http://purl.org/dc/terms/identifier> "MooseX-XSAccessor-0.000_01"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<http://purl.org/dc/terms/issued> "2013-06-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooseX-XSAccessor-0.000_01.tar.gz> ;
+	doap:revision "0.000_01"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a cpant:DeveloperRelease, doap:Version ;
+	rdfs:label "Developer release" .
+cpan:tobyink a foaf:Person ;
+	foaf:mbox <mailto:tobyink@cpan.org> ;
+	foaf:name "Toby Inkster" ;
+	foaf:nick "TOBYINK" ;
+	foaf:page <https://metacpan.org/author/TOBYINK> .

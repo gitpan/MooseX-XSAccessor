@@ -1,0 +1,103 @@
+NAME
+    MooseX::XSAccessor - use Class::XSAccessor to speed up Moose accessors
+
+SYNOPSIS
+       package MyClass;
+   
+       use Moose;
+       use MooseX::XSAccessor;
+   
+       has foo => (...);
+
+DESCRIPTION
+    This module accelerates Moose-generated accessor, reader, writer and
+    predicate methods using Class::XSAccessor. You get a speed-up for no
+    extra effort. It is automatically applied to every attribute in the
+    class.
+
+    The use of the following features of Moose attributes prevents a reader
+    from being accelerated:
+
+    *   Lazy builder or lazy default.
+
+    *   Auto-deref. (Does anybody use this anyway??)
+
+    The use of the following features prevents a writer from being
+    accelerated:
+
+    *   Type constraints (except "Any"; "Any" is effectively a no-op).
+
+    *   Triggers
+
+    *   Weak references
+
+    An "rw" accessor is effectively a reader and a writer glued together, so
+    both of the above lists apply.
+
+HINTS
+    *   Make attributes read-only when possible. This means that type
+        constraints and coercions will only apply to the constructor, not
+        the accessors, enabling the accessors to be accelerated.
+
+    *   If you do need a read-write attribute, consider making the main
+        accessor read-only, and having a separate writer method. (Like
+        MooseX::SemiAffordanceAccessor.)
+
+    *   Make defaults eager instead of lazy when possible, allowing your
+        readers to be accelerated.
+
+    *   If you need to accelerate just a specific attribute, apply the
+        attribute trait directly:
+
+           package MyClass;
+   
+           use Moose;
+   
+           has foo => (
+              traits => ["MooseX::XSAccessor::Trait::Attribute"],
+              ...,
+           );
+
+CAVEATS
+    *   Calling a writer method without a parameter in Moose does not raise
+        an exception:
+
+           $person->set_name();    # sets name attribute to "undef"
+
+        However, this is a fatal error in Class::XSAccessor.
+
+    *   Class::XSAccessor predicate methods return false when the attribute
+        tested exists but is not defined. Standard Moose predicate methods
+        return true in this situation. See
+        <https://rt.cpan.org/Ticket/Display.html?id=86127>.
+
+    *   MooseX::XSAccessor does not play nice with attribute traits that
+        alter accessor behaviour, or define additional accessors for
+        attributes.
+
+    *   MooseX::XSAccessor only works on blessed hashes; not e.g.
+        MooseX::ArrayRef or MooseX::InsideOut.
+
+BUGS
+    Please report any bugs to
+    <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor>.
+
+SEE ALSO
+    MooseX::XSAccessor::Trait::Attribute.
+
+    Moose, Moo, Class::XSAccessor.
+
+AUTHOR
+    Toby Inkster <tobyink@cpan.org>.
+
+COPYRIGHT AND LICENCE
+    This software is copyright (c) 2013 by Toby Inkster.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
+DISCLAIMER OF WARRANTIES
+    THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+    MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+

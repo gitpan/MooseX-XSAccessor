@@ -1,0 +1,103 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 caf750638b845ad9ba449cd1c5fc6abba44616bb .travis.yml
+SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
+SHA1 075867513fdaeb39e8c2102fa7a96a5c252c2915 COPYRIGHT
+SHA1 9e307a5415ca4fa0a76a08bd7236f23f15544ea8 CREDITS
+SHA1 b8f0447e43d621010c1bce8199a5def3f03335a0 Changes
+SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
+SHA1 0980905c3d5dfc76bc3a89eb993a58e59228a3da MANIFEST
+SHA1 f6d27b6b56de984cb44a2c5579650d494f6632af META.ttl
+SHA1 990dd95bccb8525fa97b2e6f9d3cb7af1df82093 META.yml
+SHA1 5e4c26609f72fc77069c27bab348819af171b775 Makefile.PL
+SHA1 acad059536c907ae64d7ceba4c1c051d413679d9 README
+SHA1 e905156d50c4731a1797619d0c76382d26674dd7 examples/bench.pl
+SHA1 06c410f05488c1612ed66b06d3a86b2580581e4a inc/Module/AutoInstall.pm
+SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
+SHA1 61ab1dd37e33ddbe155907ce51df8a3e56ac8bbf inc/Module/Install/AutoInstall.pm
+SHA1 c04f94f91fa97b9f8cfb5a36071098ab0e6c78e3 inc/Module/Install/AutoManifest.pm
+SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
+SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
+SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
+SHA1 66d3d335a03492583a3be121a7d888f63f08412c inc/Module/Install/Include.pm
+SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
+SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
+SHA1 3b9281ddf7dd6d6f5de0a9642c69333023193c80 inc/Module/Install/Package.pm
+SHA1 41f76ff6b39368a65da86377e43b34bacc2fb0eb inc/Module/Install/TrustMetaYml.pm
+SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
+SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
+SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
+SHA1 5a2f84a7a82eee0d1e5ed3628fe503a608efc10f inc/Module/Package/Dist/RDF.pm
+SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
+SHA1 e5d6511cef24a9e842fca2d825c7ba429d4ccfc7 lib/MooseX/XSAccessor.pm
+SHA1 f7afd47f9058bf8e213248e16bfe7630a9a4b99e lib/MooseX/XSAccessor/Trait/Attribute.pm
+SHA1 d58c0e87bcc233414d06661f3fae25871ef6fa61 meta/changes.pret
+SHA1 b97d22f7c96c14d49b81afe6a756665be81695ce meta/doap.pret
+SHA1 9b39096ed83829f25714535b7c1fff538a46ba49 meta/makefile.pret
+SHA1 a151cff74b5f29c00381a14d4ec8726e3763b6b2 meta/people.pret
+SHA1 0d087b8f9a7243c18353604e21842bc6199359b9 t/01basic.t
+SHA1 a5b87ba49becd72e5b62a8f3486881d551ea5812 t/lib/MyMoose.pm
+SHA1 cabd9f91338f8da01c58c9d9efd0abfef005046e t/lib/MyMoose/Role.pm
+SHA1 3e92a0119d7148b5033bdb19f82dfdf48cbdc65b t/moose_accessor_context.t
+SHA1 1a23a418f51380807fbe3de8582d5beb86039377 t/moose_accessor_inlining.t
+SHA1 dd72ce4f40f272ac9e4f9289a3888d31764072d4 t/moose_accessor_override_method.t
+SHA1 fc538496d21d63e5b4cdf5e3a9417a88791aa384 t/moose_accessor_overwrite_warning.t
+SHA1 2048b6edd3a8cd4e5c8887cbeb218747b514edcc t/moose_attr_dereference_test.t
+SHA1 e440aabfb734589cef39983fc3536b6906e06df9 t/moose_attribute_accessor_generation.t
+SHA1 3ed494f61394d972563617e4a7cce89ed888d1c3 t/moose_attribute_custom_metaclass.t
+SHA1 59f345c64a83cde8e26e059e5cd29018af444712 t/moose_attribute_delegation.t
+SHA1 50b4428b3690a458411d55a3aa653d897db007a7 t/moose_attribute_does.t
+SHA1 d24f1db18ccdb4c31028f476c1cb4f9e88ed3279 t/moose_attribute_inherited_slot_specs.t
+SHA1 f1b20467c13ab8bf70b5f3863c3c01ec1f3c6ec9 t/moose_attribute_lazy_initializer.t
+SHA1 4c49142c7b1c161632e3431d39e3a352a70fc427 t/moose_attribute_names.t
+SHA1 ad3c6bfde7004bc8bef470a0f380b38bd3bd3122 t/moose_attribute_reader_generation.t
+SHA1 85b1c77c72bc048e841adc44bab7722723f8a90b t/moose_attribute_required.t
+SHA1 65fdb41424d691b17c239e75fc4b098b9c158984 t/moose_attribute_traits.t
+SHA1 42cc5d6c42d4d570aaf0949b13999bfff2e618f3 t/moose_attribute_traits_n_meta.t
+SHA1 60d463d8552a80f3a3ae7f1793f5972ece656993 t/moose_attribute_traits_parameterized.t
+SHA1 6f0af58a48bef17fcd5b3bc7dd84aaa405bb8dff t/moose_attribute_traits_registered.t
+SHA1 2cf2b398d84d57814794201e8cc9746cbcd1b117 t/moose_attribute_triggers.t
+SHA1 88d7d5f2c54d793db36affb911ba59932e4ede28 t/moose_attribute_type_unions.t
+SHA1 f4f9abd400f72477ac733984410b3f0936aec409 t/moose_attribute_without_any_methods.t
+SHA1 ce6f7c140387a651b89f84c4964f4ebd51838a48 t/moose_attribute_writer_generation.t
+SHA1 fbc26449966e1168fc66f38b292d31ebe762ef47 t/moose_bad_coerce.t
+SHA1 323397c4afacee3370f4bfa16a37d7571e6a12b5 t/moose_chained_coercion.t
+SHA1 26800122026deb83f88b310fc12482c0ecd0990d t/moose_clone_weak.t
+SHA1 e12199444f599fbd908f2de7af5d47cfd5e8bfd6 t/moose_default_class_role_types.t
+SHA1 170b2ab45ab515516df7a0f6b2d2ada4a2cffefd t/moose_default_undef.t
+SHA1 69671fd681d0869ea95518586962f603a0643c54 t/moose_delegation_and_modifiers.t
+SHA1 aff174579b5dfe6b8c128ba611dcb825f66fb4e8 t/moose_delegation_arg_aliasing.t
+SHA1 9deeaaf2c1cf266b18e7d603c8cdbb9ecf492ddb t/moose_delegation_target_not_loaded.t
+SHA1 b08b9363facb7672764a87ca3dd056df4c6c4096 t/moose_illegal_options_for_inheritance.t
+SHA1 76496fd5b6aa79f8ac7fdce1bed8563d74f9cbb7 t/moose_inherit_lazy_build.t
+SHA1 b0bef53bda64e7a0105608824fd657c46edbc8d7 t/moose_lazy_no_default.t
+SHA1 1c37206777eb54ea79493bdbd4b2a7402fbe6f5e t/moose_method_generation_rules.t
+SHA1 0d14e0dc89606f4f97c1d16208e2e420c70f4491 t/moose_misc_attribute_coerce_lazy.t
+SHA1 88db8458992ca7acd27a1413125e16b6cf75b552 t/moose_misc_attribute_tests.t
+SHA1 678fce8e6d063453438b6af5c22551d3884af7df t/moose_more_attr_delegation.t
+SHA1 6fbd1af8403a301e38de08fd8664f1469ebf7f03 t/moose_no_init_arg.t
+SHA1 69d286b800be8f96a26278dd939db6ee9dc4ec95 t/moose_no_slot_access.t
+SHA1 0e8b4539e03158d642f66fcd50a4a1ffd004157c t/moose_non_alpha_attr_names.t
+SHA1 8e06f32555a82dcffb0d799efc6639ca26db9bfe t/moose_numeric_defaults.t
+SHA1 0832ab063fe0337dbee3f020e8927f2b0208cfa6 t/moose_trigger_and_coerce.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iEYEARECAAYFAlG6o00ACgkQzr+BKGoqfTkdngCggAjlBGTZoz9WTCUfxiacoXyG
+tnsAn04UHjTmHo39UbWBrs9VVOKvFZrL
+=CaPC
+-----END PGP SIGNATURE-----
