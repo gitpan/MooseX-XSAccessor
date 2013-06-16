@@ -10,7 +10,7 @@ use Scalar::Util qw(blessed);
 
 BEGIN {
 	$MooseX::XSAccessor::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::XSAccessor::VERSION   = '0.001';
+	$MooseX::XSAccessor::VERSION   = '0.002';
 }
 
 use Moose::Exporter;
@@ -204,12 +204,6 @@ exception:
    $person->set_name();    # sets name attribute to "undef"
 
 However, this is a fatal error in Class::XSAccessor.
-
-=item *
-
-Class::XSAccessor predicate methods return false when the attribute tested
-exists but is not defined. Standard Moose predicate methods return true in
-this situation. See L<https://rt.cpan.org/Ticket/Display.html?id=86127>.
 
 =item *
 

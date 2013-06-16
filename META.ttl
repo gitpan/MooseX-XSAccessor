@@ -8,35 +8,44 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-_:r1371203999r0 a dcs:Addition ;
+_:r1371415798r0 a dcs:Addition ;
 	rdfs:label "MooseX::XSAccessor::is_xs function." .
-_:r1371203999r1 a dcs:Packaging ;
+_:r1371415798r1 a dcs:Packaging ;
 	rdfs:label "Better test cases." .
-_:r1371203999r2 a dcs:Documentation ;
+_:r1371415798r2 a dcs:Documentation ;
 	rdfs:label "Better documentation." .
-_:r1371203999r3 a dcs:Bugfix ;
+_:r1371415798r3 a dcs:Bugfix ;
 	rdfs:label "Work around some edge cases." .
-_:r1371204000r4 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
+_:r1371415798r4 a dcs:Change ;
+	rdfs:label "Refactor overridden install_accessors into an 'after' method modifier, with the hope that this makes MooseX::XSAccessor play nicer with other MooseX modules." .
+_:r1371415798r5 a dcs:Packaging ;
+	rdfs:label "Support slightly older versions of Class::XSAccessor (back to 1.09)." .
+_:r1371415798r6 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
 	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
 	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
 	rdfs:label "MooseX::XSAccessor" .
-_:r1371204000r5 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
+_:r1371415798r7 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
 	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
 	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
 	rdfs:label "MooseX::XSAccessor" .
-_:r1371204000r6 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
+_:r1371415798r8 <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/MooseX/XSAccessor.pm" ;
 	<http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#programmingLanguage> "Perl" ;
 	a <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject>, <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode> ;
 	rdfs:label "MooseX::XSAccessor" .
-_:rb2C72A6B4D4D911E297D8385E02A047E6r0 dcs:item _:r1371203999r0, _:r1371203999r1, _:r1371203999r2, _:r1371203999r3 .
-_:rb2C72A6B4D4D911E297D8385E02A047E6r1 doap:browse <https://github.com/tobyink/p5-moosex-xsaccessor> ;
+_:rb4E399908D6C611E2ACA3616902A047E6r0 dcs:item _:r1371415798r0, _:r1371415798r1, _:r1371415798r2, _:r1371415798r3 .
+_:rb4E399908D6C611E2ACA3616902A047E6r1 dcs:item _:r1371415798r4, _:r1371415798r5, [
+		a dcs:Change ;
+		rdfs:label "Don't use Class::XSAccessor 1.16 and below to generate predicate methods, because their behaviour differs observably from Moose. If you want XS predicates, you'll need Class::XSAccessor 1.17 (which is not on CPAN yet)." ;
+		rdfs:seeAlso <http://purl.org/NET/cpan-uri/rt/ticket/86127>
+	] .
+_:rb4E399908D6C611E2ACA3616902A047E6r3 doap:browse <https://github.com/tobyink/p5-moosex-xsaccessor> ;
 	a doap:HgRepository .
 <http://dev.perl.org/licenses/> <http://purl.org/dc/terms/title> "the same terms as the perl 5 programming language system itself" .
-dist:project cpant:perl_version_from _:r1371204000r4 ;
-	cpant:readme_from _:r1371204000r6 ;
-	cpant:requires "Class::XSAccessor 1.16"^^cpant:dsWithVersion, "Moose 2.0600"^^cpant:dsWithVersion ;
+dist:project cpant:perl_version_from _:r1371415798r6 ;
+	cpant:readme_from _:r1371415798r8 ;
+	cpant:requires "Class::XSAccessor 1.09"^^cpant:dsWithVersion, "Moose 2.0600"^^cpant:dsWithVersion ;
 	cpant:test_requires "Import::Into 1.001000"^^cpant:dsWithVersion, "Test::Fatal"^^cpant:dsWithoutVersion, "Test::Moose"^^cpant:dsWithoutVersion, "Test::More 0.96"^^cpant:dsWithVersion, "Test::Requires"^^cpant:dsWithoutVersion ;
-	cpant:version_from _:r1371204000r5 ;
+	cpant:version_from _:r1371415798r7 ;
 	<http://purl.org/dc/terms/contributor> cpan:tobyink ;
 	doap:bug-database <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor> ;
 	doap:created "2013-06-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
@@ -47,8 +56,8 @@ dist:project cpant:perl_version_from _:r1371204000r4 ;
 	doap:maintainer cpan:tobyink ;
 	doap:name "MooseX-XSAccessor" ;
 	doap:programming-language "Perl" ;
-	doap:release dist:v_0-000_01, dist:v_0-000_02, dist:v_0-001 ;
-	doap:repository _:rb2C72A6B4D4D911E297D8385E02A047E6r1 ;
+	doap:release dist:v_0-000_01, dist:v_0-000_02, dist:v_0-001, dist:v_0-002 ;
+	doap:repository _:rb4E399908D6C611E2ACA3616902A047E6r3 ;
 	doap:shortdesc "use Class::XSAccessor to speed up Moose accessors" ;
 	a doap:Project .
 dist:v_0-000_01 dcs:released-by cpan:tobyink ;
@@ -58,7 +67,7 @@ dist:v_0-000_01 dcs:released-by cpan:tobyink ;
 	doap:revision "0.000_01"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	a cpant:DeveloperRelease, doap:Version ;
 	rdfs:label "Developer release" .
-dist:v_0-000_02 dcs:changeset _:rb2C72A6B4D4D911E297D8385E02A047E6r0 ;
+dist:v_0-000_02 dcs:changeset _:rb4E399908D6C611E2ACA3616902A047E6r0 ;
 	dcs:released-by cpan:tobyink ;
 	<http://purl.org/dc/terms/identifier> "MooseX-XSAccessor-0.000_02"^^<http://www.w3.org/2001/XMLSchema#string> ;
 	<http://purl.org/dc/terms/issued> "2013-06-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
@@ -73,8 +82,18 @@ dist:v_0-001 dcs:released-by cpan:tobyink ;
 	a doap:Version ;
 	rdfs:comment "No functional changes since 0.000_02." ;
 	rdfs:label "Stable release" .
+dist:v_0-002 dcs:changeset _:rb4E399908D6C611E2ACA3616902A047E6r1 ;
+	dcs:released-by cpan:tobyink ;
+	<http://purl.org/dc/terms/identifier> "MooseX-XSAccessor-0.002"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	<http://purl.org/dc/terms/issued> "2013-06-16"^^<http://www.w3.org/2001/XMLSchema#date> ;
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooseX-XSAccessor-0.002.tar.gz> ;
+	doap:revision "0.002"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a doap:Version .
 cpan:tobyink a foaf:Person ;
 	foaf:mbox <mailto:tobyink@cpan.org> ;
 	foaf:name "Toby Inkster" ;
 	foaf:nick "TOBYINK" ;
 	foaf:page <https://metacpan.org/author/TOBYINK> .
+<http://purl.org/NET/cpan-uri/rt/ticket/86127> dbug:id "86127"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	dbug:page <https://rt.cpan.org/Ticket/Display.html?id=86127> ;
+	a dbug:Issue .

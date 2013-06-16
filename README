@@ -90,11 +90,6 @@ CAVEATS
 
         However, this is a fatal error in Class::XSAccessor.
 
-    *   Class::XSAccessor predicate methods return false when the attribute
-        tested exists but is not defined. Standard Moose predicate methods
-        return true in this situation. See
-        <https://rt.cpan.org/Ticket/Display.html?id=86127>.
-
     *   MooseX::XSAccessor does not play nice with attribute traits that
         alter accessor behaviour, or define additional accessors for
         attributes. (MooseX::SetOnce and MooseX::Attribute::Chained are

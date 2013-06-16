@@ -4,22 +4,24 @@ use 5.008;
 use strict;
 use warnings;
 
-use Class::XSAccessor 1.16 ();
+use Class::XSAccessor 1.09 ();
 use Scalar::Util qw(reftype);
 use B qw(perlstring);
 
 BEGIN {
 	$MooseX::XSAccessor::Trait::Attribute::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::XSAccessor::Trait::Attribute::VERSION   = '0.001';
+	$MooseX::XSAccessor::Trait::Attribute::VERSION   = '0.002';
 }
 
 # Map Moose terminology to Class::XSAccessor options.
-my %class_xsaccessor_opt = (
+my %cxsa_opt = (
 	accessor   => "accessors",
 	reader     => "getters",
 	writer     => "setters",
-	predicate  => "predicates",
 );
+
+$cxsa_opt{predicate} = "exists_predicates"
+	if Class::XSAccessor->VERSION > 1.16;
 
 use Moose::Role;
 
@@ -65,49 +67,50 @@ sub clearer_is_simple
 	!!0;
 }
 
-override install_accessors => sub {
+after install_accessors => sub {
 	my $self = shift;
-	my ($inline) = @_;
 	
+	my $slot      = $self->name;
 	my $class     = $self->associated_class;
 	my $classname = $class->name;
-	my $is_hash   = reftype($class->get_meta_instance->create_instance) eq q(HASH);
-	my $ok        = $is_hash && $class->get_meta_instance->is_inlinable;
+	
+	# Don't attempt to do anything with instances that are not blessed hashes.
+	my $is_hash = reftype($class->get_meta_instance->create_instance) eq q(HASH);
+	return unless $is_hash && $class->get_meta_instance->is_inlinable;
 	
 	# Use inlined get method as a heuristic to detect weird shit.
-	if ($ok)
-	{
-		my $inline_get = $self->_inline_instance_get('$X');
-		$ok = !!0 if $inline_get ne sprintf('$X->{%s}', perlstring($self->name));
-	}
+	my $inline_get = $self->_inline_instance_get('$X');
+	return unless $inline_get eq sprintf('$X->{%s}', perlstring $slot);
 	
-	for my $m (qw/ accessor reader writer predicate clearer /)
+	for my $type (qw/ accessor reader writer predicate clearer /)
 	{
-		my $has_method       = "has_$m";
-		my $method_is_simple = "$m\_is_simple";
-		my $methodname       = $self->$m;
+		# Only accelerate methods if CXSA can deal with them
+		next unless exists $cxsa_opt{$type};
 		
-		next unless $self->$has_method;
+		# Only accelerate methods that exist!
+		next unless $self->${\"has_$type"};
 		
-		# Generate it the old-fashioned way...
-		my ($name, $metamethod) = $self->_process_accessors($m => $methodname, $inline);
-		$class->add_method($name, $metamethod);
+		# Check to see they're simple (no type constraint checks, etc)
+		next unless $self->${\"$type\_is_simple"};
 		
-		# Now try to accelerate it!
-		if ($ok and $self->$method_is_simple and exists $class_xsaccessor_opt{$m})
-		{
-			"Class::XSAccessor"->import(
-				class                     => $classname,
-				replace                   => 1,
-				$class_xsaccessor_opt{$m} => +{ $methodname => $self->name },
-			);
-			# Naughty!
-			no strict "refs";
-			$metamethod->{"body"} = \&{"$classname\::$methodname"};
-		}
+		my $methodname = $self->$type;
+		my $metamethod = $class->get_method($methodname);
+		
+		# Perform the actual acceleration
+		"Class::XSAccessor"->import(
+			class             => $classname,
+			replace           => 1,
+			$cxsa_opt{$type}  => +{ $methodname => $slot },
+		);
+		
+		# Naughty stuff!!!
+		# We've overwritten a Moose-generated accessor, so now we need to
+		# inform Moose's metathingies about the new coderef.
+		# $metamethod->body is read-only, so dive straight into the blessed
+		# hash.
+		no strict "refs";
+		$metamethod->{"body"} = \&{"$classname\::$methodname"};
 	}
-	
-	$self->install_delegation if $self->has_handles;
 	
 	return;
 };
