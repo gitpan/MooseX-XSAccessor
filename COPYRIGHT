@@ -3,23 +3,7 @@ Upstream-Name: MooseX-XSAccessor
 Upstream-Contact: Toby Inkster <tobyink@cpan.org>
 Source: https://metacpan.org/release/MooseX-XSAccessor
 
-Files: .travis.yml
- CONTRIBUTING
- CREDITS
- Changes
- LICENSE
- MANIFEST.SKIP
- META.ttl
- Makefile.PL
- README
- examples/bench.pl
- meta/changes.pret
- meta/doap.pret
- meta/makefile.pret
- meta/people.pret
- t/lib/MyMoose.pm
- t/lib/MyMoose/Role.pm
- t/moose_accessor_context.t
+Files: t/moose_accessor_context.t
  t/moose_accessor_inlining.t
  t/moose_accessor_override_method.t
  t/moose_accessor_overwrite_warning.t
@@ -61,14 +45,34 @@ Files: .travis.yml
  t/moose_non_alpha_attr_names.t
  t/moose_numeric_defaults.t
  t/moose_trigger_and_coerce.t
-Copyright: Unknown
-License: Unknown
+Copyright: Copyright 2013 Infinity Interactive, Inc.
+License: GPL-1.0+ or Artistic-1.0
 
-Files: lib/MooseX/XSAccessor.pm
+Files: CONTRIBUTING
+ CREDITS
+ Changes
+ LICENSE
+ META.ttl
+ Makefile.PL
+ README
+ examples/bench.pl
+ meta/changes.pret
+ meta/doap.pret
+ meta/makefile.pret
+ meta/people.pret
+ meta/rights.pret
+ t/lib/MyMoose.pm
+ t/lib/MyMoose/Role.pm
+Copyright: Copyright 2013 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: inc/Module/Install/Contributors.pm
+ lib/MooseX/XSAccessor.pm
  lib/MooseX/XSAccessor/Trait/Attribute.pm
  t/01basic.t
  t/02accel.t
  t/03funky.t
+ t/04chained.t
 Copyright: This software is copyright (c) 2013 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
@@ -83,12 +87,20 @@ Files: inc/Module/Install/TrustMetaYml.pm
 Copyright: This software is copyright (c) 2011-2012 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: inc/Module/Install/Makefile.pm
-Copyright: Copyright 2002, 2003, 2004 Audrey Tang and Brian Ingerson.
+Files: inc/YAML/Tiny.pm
+Copyright: Copyright 2006 - 2012 Adam Kennedy.
 License: GPL-1.0+ or Artistic-1.0
+
+Files: .travis.yml
+Copyright: Unknown
+License: Unknown
 
 Files: inc/Module/Install/Base.pm
 Copyright: Copyright 2003, 2004 by Audrey Tang <autrijus@autrijus.org>.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: inc/Module/Install/Package.pm
+Copyright: Copyright (c) 2011. Ingy doet Net.
 License: GPL-1.0+ or Artistic-1.0
 
 Files: COPYRIGHT
@@ -96,12 +108,12 @@ Copyright: None
 License: public-domain
 Comment: This file! Automatically generated.
 
-Files: inc/Module/Install/Package.pm
-Copyright: Copyright (c) 2011. Ingy doet Net.
+Files: inc/Module/Install/Makefile.pm
+Copyright: Copyright 2002, 2003, 2004 Audrey Tang and Brian Ingerson.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: inc/YAML/Tiny.pm
-Copyright: Copyright 2006 - 2012 Adam Kennedy.
+Files: MANIFEST.SKIP
+Copyright: Copyright 2013 Ingy döt Net.
 License: GPL-1.0+ or Artistic-1.0
 
 License: Artistic-1.0

@@ -10,7 +10,7 @@ use Scalar::Util qw(blessed);
 
 BEGIN {
 	$MooseX::XSAccessor::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::XSAccessor::VERSION   = '0.003';
+	$MooseX::XSAccessor::VERSION   = '0.004';
 }
 
 use Moose::Exporter;
@@ -42,12 +42,8 @@ sub is_xs
 		$sub = \&{$sub};
 	}
 	
-	# Best heuristic I could find. B::Deparse does a shoddy job
-	# deparsing XSUBs.
-	#
-	require B::Deparse;
-	my $text = B::Deparse->new->coderef2text($sub);
-	return ($text eq ";");
+	require B;
+	!! B::svref_2object($sub)->XSUB;
 }
 
 1;
@@ -137,15 +133,30 @@ called by its full name.
 
 =item C<< MooseX::XSAccessor::is_xs($sub) >>
 
-Returns a boolean indicating whether a sub is an XSUB. This uses some
-heuristics, and may not always be reliable, but seems to work OK
-differentiating Moose/Moo Perl accessors, from Mouse/Class::XSAccessor
-XS accessors.
+Returns a boolean indicating whether a sub is an XSUB.
 
 C<< $sub >> may be a coderef, L<Class::MOP::Method> object, or a qualified
 sub name as a string (e.g. C<< "MyClass::foo" >>).
 
 =back
+
+=head2 Chained accessors and writers
+
+L<MooseX::XSAccessor> can detect chained accessors and writers created
+using L<MooseX::Attribute::Chained>, and can accelerate those too.
+
+   package Local::Class;
+   use Moose;
+   use MooseX::XSAccessor;
+   use MooseX::Attribute::Chained;
+   
+   has foo => (traits => ["Chained"], is => "rw");
+   has bar => (traits => ["Chained"], is => "ro", writer => "_set_bar");
+   has baz => (                       is => "rw");  # not chained
+   
+   my $obj = "Local::Class"->new;
+   $obj->foo(1)->_set_bar(2);
+   print $obj->dump;
 
 =head1 HINTS
 
@@ -213,8 +224,8 @@ However, this is a fatal error in Class::XSAccessor.
 
 MooseX::XSAccessor does not play nice with attribute traits that alter
 accessor behaviour, or define additional accessors for attributes.
-(L<MooseX::SetOnce> and L<MooseX::Attribute::Chained> are examples
-thereof.)
+L<MooseX::SetOnce> is an example thereof. L<MooseX::Attribute::Chained>
+is handled as a special exception.
 
 =item *
 

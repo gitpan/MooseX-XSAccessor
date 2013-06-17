@@ -16,15 +16,15 @@ Hash: SHA1
 
 SHA1 caf750638b845ad9ba449cd1c5fc6abba44616bb .travis.yml
 SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 7ae2a9580b21524a585085b9d2664b6d28e85265 COPYRIGHT
-SHA1 9e307a5415ca4fa0a76a08bd7236f23f15544ea8 CREDITS
-SHA1 baf3edd07435d4d81df0563208582fb369a3d6c7 Changes
+SHA1 c52a8a1e50c3c83a835bc765205aeecc60796880 COPYRIGHT
+SHA1 0ea85cbbed55c979ef850dc05676b9b065f79a8b CREDITS
+SHA1 393a7bba8d5515723284e6eea50b65b01e7dff2b Changes
 SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
-SHA1 31e4d7514a55e80190fd14b09e3f5ef1f9492202 MANIFEST
-SHA1 2cd6bff61f745015e0c6d2817f259a3e3117302a META.ttl
-SHA1 e87e0a58be9d8cdbec09e100caa24fd659b3ede3 META.yml
+SHA1 25ae9472c6dd0368c32aa41b88223aee3450bfdf MANIFEST
+SHA1 2c5428ab086e8aeeb7ab164f3bbdc88173076c50 META.ttl
+SHA1 6ccbdda14c8bb17fc4e7649593790fcc39996317 META.yml
 SHA1 5e4c26609f72fc77069c27bab348819af171b775 Makefile.PL
-SHA1 4a10f840db242b84bba43db19f2d459209851142 README
+SHA1 cb3a3e43ff10b633a4a25711abec57ec55ea47bf README
 SHA1 e905156d50c4731a1797619d0c76382d26674dd7 examples/bench.pl
 SHA1 06c410f05488c1612ed66b06d3a86b2580581e4a inc/Module/AutoInstall.pm
 SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
@@ -32,6 +32,7 @@ SHA1 61ab1dd37e33ddbe155907ce51df8a3e56ac8bbf inc/Module/Install/AutoInstall.pm
 SHA1 c04f94f91fa97b9f8cfb5a36071098ab0e6c78e3 inc/Module/Install/AutoManifest.pm
 SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
 SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
+SHA1 9e4cc10c7f138a3f2c60d9ee1f34261f0d8c5aae inc/Module/Install/Contributors.pm
 SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
 SHA1 66d3d335a03492583a3be121a7d888f63f08412c inc/Module/Install/Include.pm
 SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
@@ -43,15 +44,17 @@ SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
 SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
 SHA1 5a2f84a7a82eee0d1e5ed3628fe503a608efc10f inc/Module/Package/Dist/RDF.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
-SHA1 ccaedf6f5215259b5c2ca3fb6b62e942f29ce358 lib/MooseX/XSAccessor.pm
-SHA1 c8faf6d84d7a929414c9c4c4ff3213aa0ab9f68d lib/MooseX/XSAccessor/Trait/Attribute.pm
-SHA1 37b608b4c816ab906cf3a11576b9cde9ebf5579f meta/changes.pret
+SHA1 f012dc29a3d839148732770ceca236d2339f766d lib/MooseX/XSAccessor.pm
+SHA1 7b8059c62608af0dd7eb83f324f445ca532f45d3 lib/MooseX/XSAccessor/Trait/Attribute.pm
+SHA1 7d2dc1ac027402d06c6e4d99d4b06d099cb4d635 meta/changes.pret
 SHA1 b97d22f7c96c14d49b81afe6a756665be81695ce meta/doap.pret
 SHA1 ee8cc9eb56b557eccc9ad68f7620f4537861b712 meta/makefile.pret
-SHA1 a151cff74b5f29c00381a14d4ec8726e3763b6b2 meta/people.pret
+SHA1 24caa8d364ddfcb78f48fd3bb3b2e05b80387939 meta/people.pret
+SHA1 3e01b04e2212ab4c83d150be6d0190906aa38c78 meta/rights.pret
 SHA1 43ce0383eef7bf059cb475e46979a531904f2db4 t/01basic.t
 SHA1 353babc996b055918b2e074c31fad0481e7914b9 t/02accel.t
 SHA1 5c090461bbc7106471b8a67cb45cd36efc81f301 t/03funky.t
+SHA1 febe4c6657a47f206cdd839fcb3215e981f43363 t/04chained.t
 SHA1 a5b87ba49becd72e5b62a8f3486881d551ea5812 t/lib/MyMoose.pm
 SHA1 cabd9f91338f8da01c58c9d9efd0abfef005046e t/lib/MyMoose/Role.pm
 SHA1 3e92a0119d7148b5033bdb19f82dfdf48cbdc65b t/moose_accessor_context.t
@@ -99,7 +102,7 @@ SHA1 0832ab063fe0337dbee3f020e8927f2b0208cfa6 t/moose_trigger_and_coerce.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAlG+9KwACgkQzr+BKGoqfTkBNgCdHRupPsN1wMJZcNQ76fY6ngnF
-qTYAnjfoZ/h24xwcJtdwOyAdb3BDj1wO
-=d5f3
+iEYEARECAAYFAlG/KQ8ACgkQzr+BKGoqfTl2QACfc0LBToF8u/6P3lDbMGrGHHdB
+w14An3bxSsYajP3A0r5cVMlSmAc60+9d
+=B7Ig
 -----END PGP SIGNATURE-----

@@ -45,13 +45,27 @@ DESCRIPTION
     to be called by its full name.
 
     "MooseX::XSAccessor::is_xs($sub)"
-        Returns a boolean indicating whether a sub is an XSUB. This uses
-        some heuristics, and may not always be reliable, but seems to work
-        OK differentiating Moose/Moo Perl accessors, from
-        Mouse/Class::XSAccessor XS accessors.
+        Returns a boolean indicating whether a sub is an XSUB.
 
         $sub may be a coderef, Class::MOP::Method object, or a qualified sub
         name as a string (e.g. "MyClass::foo").
+
+  Chained accessors and writers
+    MooseX::XSAccessor can detect chained accessors and writers created
+    using MooseX::Attribute::Chained, and can accelerate those too.
+
+       package Local::Class;
+       use Moose;
+       use MooseX::XSAccessor;
+       use MooseX::Attribute::Chained;
+   
+       has foo => (traits => ["Chained"], is => "rw");
+       has bar => (traits => ["Chained"], is => "ro", writer => "_set_bar");
+       has baz => (                       is => "rw");  # not chained
+   
+       my $obj = "Local::Class"->new;
+       $obj->foo(1)->_set_bar(2);
+       print $obj->dump;
 
 HINTS
     *   Make attributes read-only when possible. This means that type
@@ -98,8 +112,8 @@ CAVEATS
 
     *   MooseX::XSAccessor does not play nice with attribute traits that
         alter accessor behaviour, or define additional accessors for
-        attributes. (MooseX::SetOnce and MooseX::Attribute::Chained are
-        examples thereof.)
+        attributes. MooseX::SetOnce is an example thereof.
+        MooseX::Attribute::Chained is handled as a special exception.
 
     *   MooseX::XSAccessor only works on blessed hash storage; not e.g.
         MooseX::ArrayRef or MooseX::InsideOut. MooseX::XSAccessor is usually

@@ -10,7 +10,7 @@ use B qw(perlstring);
 
 BEGIN {
 	$MooseX::XSAccessor::Trait::Attribute::AUTHORITY = 'cpan:TOBYINK';
-	$MooseX::XSAccessor::Trait::Attribute::VERSION   = '0.003';
+	$MooseX::XSAccessor::Trait::Attribute::VERSION   = '0.004';
 }
 
 # Map Moose terminology to Class::XSAccessor options.
@@ -82,6 +82,9 @@ after install_accessors => sub {
 	my $inline_get = $self->_inline_instance_get('$X');
 	return unless $inline_get eq sprintf('$X->{%s}', perlstring $slot);
 	
+	# Detect use of MooseX::Attribute::Chained
+	my $is_chained = $self->does('MooseX::Traits::Attribute::Chained');
+	
 	for my $type (qw/ accessor reader writer predicate clearer /)
 	{
 		# Only accelerate methods if CXSA can deal with them
@@ -100,6 +103,7 @@ after install_accessors => sub {
 		"Class::XSAccessor"->import(
 			class             => $classname,
 			replace           => 1,
+			chained           => $is_chained,
 			$cxsa_opt{$type}  => +{ $methodname => $slot },
 		);
 		
