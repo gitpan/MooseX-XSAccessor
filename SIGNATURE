@@ -16,15 +16,15 @@ Hash: SHA1
 
 SHA1 caf750638b845ad9ba449cd1c5fc6abba44616bb .travis.yml
 SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 7fc0defd9da8c98d29dbf71c4f5abc811fd552f2 COPYRIGHT
+SHA1 7ae2a9580b21524a585085b9d2664b6d28e85265 COPYRIGHT
 SHA1 9e307a5415ca4fa0a76a08bd7236f23f15544ea8 CREDITS
-SHA1 3ba03bb47805586b22384740a3e6835418f9db01 Changes
+SHA1 baf3edd07435d4d81df0563208582fb369a3d6c7 Changes
 SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
 SHA1 31e4d7514a55e80190fd14b09e3f5ef1f9492202 MANIFEST
-SHA1 baa30e6a6e8fd9593a4b4e3fbe210ddf4650427a META.ttl
-SHA1 00ee766c0be40ca870402638e460f6398b02520c META.yml
+SHA1 2cd6bff61f745015e0c6d2817f259a3e3117302a META.ttl
+SHA1 e87e0a58be9d8cdbec09e100caa24fd659b3ede3 META.yml
 SHA1 5e4c26609f72fc77069c27bab348819af171b775 Makefile.PL
-SHA1 39c66875a0c5da2c79067a28e03146a93496c6db README
+SHA1 4a10f840db242b84bba43db19f2d459209851142 README
 SHA1 e905156d50c4731a1797619d0c76382d26674dd7 examples/bench.pl
 SHA1 06c410f05488c1612ed66b06d3a86b2580581e4a inc/Module/AutoInstall.pm
 SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
@@ -43,9 +43,9 @@ SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
 SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
 SHA1 5a2f84a7a82eee0d1e5ed3628fe503a608efc10f inc/Module/Package/Dist/RDF.pm
 SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
-SHA1 d8bbae43b53474cb056c625739f2db4e3a1da73f lib/MooseX/XSAccessor.pm
-SHA1 8476a235d0df8b6d69a831f8c28fbec943cccd1b lib/MooseX/XSAccessor/Trait/Attribute.pm
-SHA1 9e65719768d60d6d4c4d36f11617f35b507c2291 meta/changes.pret
+SHA1 ccaedf6f5215259b5c2ca3fb6b62e942f29ce358 lib/MooseX/XSAccessor.pm
+SHA1 c8faf6d84d7a929414c9c4c4ff3213aa0ab9f68d lib/MooseX/XSAccessor/Trait/Attribute.pm
+SHA1 37b608b4c816ab906cf3a11576b9cde9ebf5579f meta/changes.pret
 SHA1 b97d22f7c96c14d49b81afe6a756665be81695ce meta/doap.pret
 SHA1 ee8cc9eb56b557eccc9ad68f7620f4537861b712 meta/makefile.pret
 SHA1 a151cff74b5f29c00381a14d4ec8726e3763b6b2 meta/people.pret
@@ -80,7 +80,7 @@ SHA1 fbc26449966e1168fc66f38b292d31ebe762ef47 t/moose_bad_coerce.t
 SHA1 323397c4afacee3370f4bfa16a37d7571e6a12b5 t/moose_chained_coercion.t
 SHA1 26800122026deb83f88b310fc12482c0ecd0990d t/moose_clone_weak.t
 SHA1 e12199444f599fbd908f2de7af5d47cfd5e8bfd6 t/moose_default_class_role_types.t
-SHA1 170b2ab45ab515516df7a0f6b2d2ada4a2cffefd t/moose_default_undef.t
+SHA1 59c2fc6feb1e56d0d2f1f7ef88841d437885e69b t/moose_default_undef.t
 SHA1 69671fd681d0869ea95518586962f603a0643c54 t/moose_delegation_and_modifiers.t
 SHA1 aff174579b5dfe6b8c128ba611dcb825f66fb4e8 t/moose_delegation_arg_aliasing.t
 SHA1 9deeaaf2c1cf266b18e7d603c8cdbb9ecf492ddb t/moose_delegation_target_not_loaded.t
@@ -99,7 +99,7 @@ SHA1 0832ab063fe0337dbee3f020e8927f2b0208cfa6 t/moose_trigger_and_coerce.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAlG+JVMACgkQzr+BKGoqfTmj6wCgpQo+NDm6fG05A8pGBNSxUB3T
-3I4AoIKLsPne0JLwJ64DKpq5gon85PYa
-=kCgh
+iEYEARECAAYFAlG+9KwACgkQzr+BKGoqfTkBNgCdHRupPsN1wMJZcNQ76fY6ngnF
+qTYAnjfoZ/h24xwcJtdwOyAdb3BDj1wO
+=d5f3
 -----END PGP SIGNATURE-----

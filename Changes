@@ -6,6 +6,14 @@ Home page:    <https://metacpan.org/release/MooseX-XSAccessor>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.003  2013-06-17
+
+ - (Documentation) Document the circumstances under which predicates and
+   clearers can be acceleated (respectively: if Class::XSAccessor is new
+   enough, and never).
+ - (Packaging) Since 0.002 we shouldn't need to skip test
+   `t/moose_default_undef.t` anymore.
+
 0.002  2013-06-16
 
  - (Packaging) Support slightly older versions of Class::XSAccessor (back
