@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: MooseX-XSAccessor
-Upstream-Contact: Toby Inkster <tobyink@cpan.org>
+Upstream-Contact: Toby Inkster (TOBYINK) <tobyink@cpan.org>
 Source: https://metacpan.org/release/MooseX-XSAccessor
 
 Files: t/moose_accessor_context.t
@@ -48,73 +48,39 @@ Files: t/moose_accessor_context.t
 Copyright: Copyright 2013 Infinity Interactive, Inc.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: CONTRIBUTING
- CREDITS
- Changes
- LICENSE
- META.ttl
- Makefile.PL
- README
- examples/bench.pl
- meta/changes.pret
- meta/doap.pret
- meta/makefile.pret
- meta/people.pret
- meta/rights.pret
- t/lib/MyMoose.pm
- t/lib/MyMoose/Role.pm
-Copyright: Copyright 2013 Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/Module/Install/Contributors.pm
- lib/MooseX/XSAccessor.pm
+Files: lib/MooseX/XSAccessor.pm
  lib/MooseX/XSAccessor/Trait/Attribute.pm
  t/01basic.t
  t/02accel.t
  t/03funky.t
  t/04chained.t
+ t/05lvalue.t
 Copyright: This software is copyright (c) 2013 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: inc/Module/Install.pm
- inc/Module/Install/Include.pm
- inc/Module/Install/Metadata.pm
-Copyright: Copyright 2002 - 2012 Brian Ingerson, Audrey Tang and Adam Kennedy.
+Files: CONTRIBUTING
+ CREDITS
+ Changes
+ LICENSE
+ Makefile.PL
+ README
+ doap.ttl
+Copyright: Copyright 1970 Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: inc/Module/Install/TrustMetaYml.pm
- inc/Module/Package/Dist/RDF.pm
-Copyright: This software is copyright (c) 2011-2012 by Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/YAML/Tiny.pm
-Copyright: Copyright 2006 - 2012 Adam Kennedy.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: .travis.yml
-Copyright: Unknown
-License: Unknown
-
-Files: inc/Module/Install/Base.pm
-Copyright: Copyright 2003, 2004 by Audrey Tang <autrijus@autrijus.org>.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: inc/Module/Install/Package.pm
-Copyright: Copyright (c) 2011. Ingy doet Net.
+Files: META.json
+ META.yml
+ dist.ini
+ examples/bench.pl
+ t/lib/MyMoose.pm
+ t/lib/MyMoose/Role.pm
+Copyright: Copyright 2013 Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
 Files: COPYRIGHT
+ SIGNATURE
 Copyright: None
 License: public-domain
-Comment: This file! Automatically generated.
-
-Files: inc/Module/Install/Makefile.pm
-Copyright: Copyright 2002, 2003, 2004 Audrey Tang and Brian Ingerson.
-License: GPL-1.0+ or Artistic-1.0
-
-Files: MANIFEST.SKIP
-Copyright: Copyright 2013 Ingy döt Net.
-License: GPL-1.0+ or Artistic-1.0
 
 License: Artistic-1.0
  This software is Copyright (c) 2013 by the copyright holder(s).
@@ -129,4 +95,3 @@ License: GPL-1.0
  This is free software, licensed under:
  
    The GNU General Public License, Version 1, February 1989
-

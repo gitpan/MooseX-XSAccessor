@@ -14,47 +14,26 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 caf750638b845ad9ba449cd1c5fc6abba44616bb .travis.yml
 SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 c52a8a1e50c3c83a835bc765205aeecc60796880 COPYRIGHT
-SHA1 0ea85cbbed55c979ef850dc05676b9b065f79a8b CREDITS
-SHA1 393a7bba8d5515723284e6eea50b65b01e7dff2b Changes
-SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
-SHA1 25ae9472c6dd0368c32aa41b88223aee3450bfdf MANIFEST
-SHA1 2c5428ab086e8aeeb7ab164f3bbdc88173076c50 META.ttl
-SHA1 6ccbdda14c8bb17fc4e7649593790fcc39996317 META.yml
-SHA1 5e4c26609f72fc77069c27bab348819af171b775 Makefile.PL
-SHA1 cb3a3e43ff10b633a4a25711abec57ec55ea47bf README
+SHA1 0a3a76aa9035d7ca12a49d419e4d9927fba6f8f8 COPYRIGHT
+SHA1 3870f05f7dcb54ae836fc753a9771b588c39a063 CREDITS
+SHA1 936c2e613df1ae8f1162a515447eb4e3970aec54 Changes
+SHA1 ec5a7b4f3023f03ebf821b57690758f7e6f3ae2a LICENSE
+SHA1 ea68eb859f569ab33e2aa1794ce6c95381ffa060 MANIFEST
+SHA1 2db8fcf5158180b649cd67a82e2aaf4cea86758b META.json
+SHA1 60b26df71656f683544e10fd261dcf764921c320 META.yml
+SHA1 46d38645208f03b77dda25d50aa925e388ac487d Makefile.PL
+SHA1 445b2ccdcbaedeea99f503f46378427100612089 README
+SHA1 9fc50b6f2608f43f5c4f2d0209433ffef4fa7ef7 dist.ini
+SHA1 b8f37ab0a2722f87411e9eb038cf00b3facbe446 doap.ttl
 SHA1 e905156d50c4731a1797619d0c76382d26674dd7 examples/bench.pl
-SHA1 06c410f05488c1612ed66b06d3a86b2580581e4a inc/Module/AutoInstall.pm
-SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
-SHA1 61ab1dd37e33ddbe155907ce51df8a3e56ac8bbf inc/Module/Install/AutoInstall.pm
-SHA1 c04f94f91fa97b9f8cfb5a36071098ab0e6c78e3 inc/Module/Install/AutoManifest.pm
-SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
-SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
-SHA1 9e4cc10c7f138a3f2c60d9ee1f34261f0d8c5aae inc/Module/Install/Contributors.pm
-SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
-SHA1 66d3d335a03492583a3be121a7d888f63f08412c inc/Module/Install/Include.pm
-SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
-SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
-SHA1 3b9281ddf7dd6d6f5de0a9642c69333023193c80 inc/Module/Install/Package.pm
-SHA1 41f76ff6b39368a65da86377e43b34bacc2fb0eb inc/Module/Install/TrustMetaYml.pm
-SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
-SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
-SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
-SHA1 5a2f84a7a82eee0d1e5ed3628fe503a608efc10f inc/Module/Package/Dist/RDF.pm
-SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
-SHA1 f012dc29a3d839148732770ceca236d2339f766d lib/MooseX/XSAccessor.pm
-SHA1 7b8059c62608af0dd7eb83f324f445ca532f45d3 lib/MooseX/XSAccessor/Trait/Attribute.pm
-SHA1 7d2dc1ac027402d06c6e4d99d4b06d099cb4d635 meta/changes.pret
-SHA1 b97d22f7c96c14d49b81afe6a756665be81695ce meta/doap.pret
-SHA1 ee8cc9eb56b557eccc9ad68f7620f4537861b712 meta/makefile.pret
-SHA1 24caa8d364ddfcb78f48fd3bb3b2e05b80387939 meta/people.pret
-SHA1 3e01b04e2212ab4c83d150be6d0190906aa38c78 meta/rights.pret
+SHA1 17da81666e571b29d06a4185c5f94a5b6e8b6a1c lib/MooseX/XSAccessor.pm
+SHA1 ccf88ae55a44e8b9ac3e687594f01623adf61474 lib/MooseX/XSAccessor/Trait/Attribute.pm
 SHA1 43ce0383eef7bf059cb475e46979a531904f2db4 t/01basic.t
 SHA1 353babc996b055918b2e074c31fad0481e7914b9 t/02accel.t
 SHA1 5c090461bbc7106471b8a67cb45cd36efc81f301 t/03funky.t
 SHA1 febe4c6657a47f206cdd839fcb3215e981f43363 t/04chained.t
+SHA1 11e13464b3d499ff292e06a1f5850525a6b5ed62 t/05lvalue.t
 SHA1 a5b87ba49becd72e5b62a8f3486881d551ea5812 t/lib/MyMoose.pm
 SHA1 cabd9f91338f8da01c58c9d9efd0abfef005046e t/lib/MyMoose/Role.pm
 SHA1 3e92a0119d7148b5033bdb19f82dfdf48cbdc65b t/moose_accessor_context.t
@@ -102,7 +81,7 @@ SHA1 0832ab063fe0337dbee3f020e8927f2b0208cfa6 t/moose_trigger_and_coerce.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAlG/KQ8ACgkQzr+BKGoqfTl2QACfc0LBToF8u/6P3lDbMGrGHHdB
-w14An3bxSsYajP3A0r5cVMlSmAc60+9d
-=B7Ig
+iEYEARECAAYFAlIcYwUACgkQzr+BKGoqfTnhVQCeL9iuAipp1WsUOG//1ucHlcfH
+1msAnRc/xUr/KZk8RA77GGCJts+zZk0S
+=bIDX
 -----END PGP SIGNATURE-----
