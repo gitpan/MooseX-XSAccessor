@@ -6,47 +6,65 @@ Home page:    <https://metacpan.org/release/MooseX-XSAccessor>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor>
 Maintainer:   Toby Inkster (TOBYINK) <tobyink@cpan.org>
 
+0.006	2013-10-30
+
+ [ Test Suite ]
+ - Avoid triggering silly deprecation warnings from
+   MooseX::Attribute::Chained.
+ - Pull latest attribute tests from Moose; the old versions of these test
+   cases broke with Moose 2.11xx.
+
 0.005	2013-08-27
 
- - (Addition) Integration with MooseX::LvalueAttribute.
+ - Added: Integration with MooseX::LvalueAttribute.
 
 0.004	2013-06-17
 
- - () Improved `is_xs` implementation.
-   Florian Ragwitz++
- - (Addition) Integration with MooseX::Attribute::Chained.
+ - Added: Integration with MooseX::Attribute::Chained.
    Dagfinn Ilmari Mannsåker++
+ - Improved `is_xs` implementation.
+   Florian Ragwitz++
 
 0.003	2013-06-17
 
- - (Documentation) Document the circumstances under which predicates and
-   clearers can be acceleated (respectively: if Class::XSAccessor is new
-   enough, and never).
- - (Packaging) Since 0.002 we shouldn't need to skip test
-   `t/moose_default_undef.t` anymore.
+ [ Documentation ]
+ - Document the circumstances under which predicates and clearers can be
+   acceleated (respectively: if Class::XSAccessor is new enough, and
+   never).
+
+ [ Packaging ]
+ - Since 0.002 we shouldn't need to skip test `t/moose_default_undef.t`
+   anymore.
 
 0.002	2013-06-16
 
- - (Change) Don't use Class::XSAccessor 1.16 and below to generate
-   predicate methods, because their behaviour differs observably from
-   Moose. If you want XS predicates, you'll need Class::XSAccessor 1.17
-   (which is not on CPAN yet).
+ [ Packaging ]
+ - Support slightly older versions of Class::XSAccessor (back to 1.09).
+
+ [ Other ]
+ - Don't use Class::XSAccessor 1.16 and below to generate predicate
+   methods, because their behaviour differs observably from Moose. If you
+   want XS predicates, you'll need Class::XSAccessor 1.17 (which is not on
+   CPAN yet).
    <http://purl.org/NET/cpan-uri/rt/ticket/86127>
- - (Change) Refactor overridden install_accessors into an 'after' method
-   modifier, with the hope that this makes MooseX::XSAccessor play nicer
-   with other MooseX modules.
- - (Packaging) Support slightly older versions of Class::XSAccessor (back
-   to 1.09).
+ - Refactor overridden install_accessors into an 'after' method modifier,
+   with the hope that this makes MooseX::XSAccessor play nicer with other
+   MooseX modules.
 
 0.001	2013-06-14	Stable release
 
-
 0.000_02	2013-06-14
 
- - (Addition) MooseX::XSAccessor::is_xs function.
- - (Bugfix) Work around some edge cases.
- - (Documentation) Better documentation.
- - (Packaging) Better test cases.
+ [ Bug Fixes ]
+ - Work around some edge cases.
+
+ [ Documentation ]
+ - Better documentation.
+
+ [ Packaging ]
+ - Better test cases.
+
+ [ Other ]
+ - Added: MooseX::XSAccessor::is_xs function.
 
 0.000_01	2013-06-14	Developer release
-

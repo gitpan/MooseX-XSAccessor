@@ -4,10 +4,10 @@
       "Toby Inkster (TOBYINK) <tobyink@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.013, CPAN::Meta::Converter version 2.120921",
    "keywords" : [],
    "license" : [
-      "perl"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -23,6 +23,7 @@
          "xt"
       ]
    },
+   "optional_features" : {},
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -35,32 +36,32 @@
             "Moose" : "2.0600"
          },
          "suggests" : {
-            "MooseX::Attribute::Chained" : 0,
-            "MooseX::LvalueAttribute" : 0
+            "MooseX::Attribute::Chained" : "0",
+            "MooseX::LvalueAttribute" : "0"
          }
       },
       "test" : {
          "recommends" : {
-            "MooseX::Attribute::Chained" : 0,
-            "MooseX::LvalueAttribute" : 0
+            "MooseX::Attribute::Chained" : "0",
+            "MooseX::LvalueAttribute" : "0"
          },
          "requires" : {
             "Import::Into" : "1.001000",
-            "Test::Fatal" : 0,
-            "Test::Moose" : 0,
+            "Test::Fatal" : "0",
+            "Test::Moose" : "0",
             "Test::More" : "0.96",
-            "Test::Requires" : 0
+            "Test::Requires" : "0"
          }
       }
    },
    "provides" : {
       "MooseX::XSAccessor" : {
          "file" : "lib/MooseX/XSAccessor.pm",
-         "version" : "0.005"
+         "version" : "0.006"
       },
       "MooseX::XSAccessor::Trait::Attribute" : {
          "file" : "lib/MooseX/XSAccessor/Trait/Attribute.pm",
-         "version" : "0.005"
+         "version" : "0.006"
       }
    },
    "release_status" : "stable",
@@ -78,9 +79,8 @@
          "web" : "https://github.com/tobyink/p5-moosex-xsaccessor"
       }
    },
-   "version" : "0.005",
+   "version" : "0.006",
    "x_contributors" : [
       "Florian Ragwitz (FLORA) <flora@cpan.org>"
-   ],
-   "x_provides_scripts" : {}
+   ]
 }

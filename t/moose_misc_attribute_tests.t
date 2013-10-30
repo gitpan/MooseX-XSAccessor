@@ -10,6 +10,7 @@ use warnings;
 use Test::More;
 use Test::Fatal;
 
+use Test::Requires { Moose => '2.1102' };  # error message changed
 
 {
     {
@@ -268,7 +269,7 @@ ok(OutOfClassTest->meta->get_attribute('bar'), 'attr created from can');
         package Foo;
         use MyMoose;
 
-        ::like( ::exception { has 'foo' => ( 'ro', isa => 'Str' ) }, qr/^Usage/, 'has throws error with odd number of attribute options' );
+        ::like( ::exception { has 'foo' => ( 'ro', isa => 'Str' ) }, qr/\QYou must pass an even number of attribute options/, 'has throws error with odd number of attribute options' );
     }
 
 }

@@ -44,7 +44,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "MooseX-XSAccessor";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_01>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_02>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-005>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_01>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_02>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-006>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-moosex-xsaccessor>;
@@ -164,6 +164,23 @@
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooseX-XSAccessor-0.005.tar.gz>;
 	doap:revision        "0.005"^^xsd:string.
 
+<http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-006>
+	a                    doap:Version;
+	dc:identifier        "MooseX-XSAccessor-0.006"^^xsd:string;
+	dc:issued            "2013-10-30"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Tests;
+			rdfs:label "Avoid triggering silly deprecation warnings from MooseX::Attribute::Chained.";
+		], [
+			a doap-changeset:Tests;
+			rdfs:label "Pull latest attribute tests from Moose; the old versions of these test cases broke with Moose 2.11xx.";
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooseX-XSAccessor-0.006.tar.gz>;
+	doap:revision        "0.006"^^xsd:string.
+
 <http://purl.org/NET/cpan-uri/person/flora>
 	a                    foaf:Person;
 	foaf:name            "Florian Ragwitz";
@@ -193,6 +210,18 @@
 	a                    doap-bugs:Issue;
 	doap-bugs:id         "86127"^^xsd:string;
 	doap-bugs:page       <https://rt.cpan.org/Ticket/Display.html?id=86127>.
+
+[]
+	a                    nfo:FileDataObject;
+	dc:license           <http://dev.perl.org/licenses/>;
+	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
+	nfo:fileName         "CONTRIBUTING".
+
+[]
+	a                    nfo:FileDataObject;
+	dc:license           <http://dev.perl.org/licenses/>;
+	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
+	nfo:fileName         "CREDITS".
 
 []
 	a                    nfo:FileDataObject, nfo:TextDocument;
@@ -367,18 +396,6 @@
 	dc:license           <http://dev.perl.org/licenses/>;
 	dc:rightsHolder      <file:///home/tai/perl5/hg/p5-moosex-xsaccessor/meta/rights.pret#infinity>;
 	nfo:fileName         "t/moose_attribute_required.t".
-
-[]
-	a                    nfo:FileDataObject;
-	dc:license           <http://dev.perl.org/licenses/>;
-	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
-	nfo:fileName         "CONTRIBUTING".
-
-[]
-	a                    nfo:FileDataObject;
-	dc:license           <http://dev.perl.org/licenses/>;
-	dc:rightsHolder      <http://purl.org/NET/cpan-uri/person/tobyink>;
-	nfo:fileName         "CREDITS".
 
 []
 	a                    nfo:FileDataObject, nfo:SourceCode;

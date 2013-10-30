@@ -15,24 +15,25 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 294505f858f11dd062e9916e3f50d88210a9ef54 CONTRIBUTING
-SHA1 0a3a76aa9035d7ca12a49d419e4d9927fba6f8f8 COPYRIGHT
+SHA1 89c981aa279559de073a02aaca0c72b9bf195a77 COPYRIGHT
 SHA1 3870f05f7dcb54ae836fc753a9771b588c39a063 CREDITS
-SHA1 936c2e613df1ae8f1162a515447eb4e3970aec54 Changes
+SHA1 3d1689b98d3dc1b3518cb52031f2f803b41e92e5 Changes
+SHA1 5bd5ff67308f23fb0125306d314d9500b790ccc9 INSTALL
 SHA1 ec5a7b4f3023f03ebf821b57690758f7e6f3ae2a LICENSE
-SHA1 ea68eb859f569ab33e2aa1794ce6c95381ffa060 MANIFEST
-SHA1 2db8fcf5158180b649cd67a82e2aaf4cea86758b META.json
-SHA1 60b26df71656f683544e10fd261dcf764921c320 META.yml
-SHA1 46d38645208f03b77dda25d50aa925e388ac487d Makefile.PL
+SHA1 b0fb093150fdd1e48ed0d78f92e38bcc2166cad0 MANIFEST
+SHA1 85b4ccebcc18c214995517f69a51cc13442eefec META.json
+SHA1 60b5386eee89911b56121b2f8a707dd9ba19e7a6 META.yml
+SHA1 4fc4479261b4263d2c5146851c02fc1ded648c83 Makefile.PL
 SHA1 445b2ccdcbaedeea99f503f46378427100612089 README
 SHA1 9fc50b6f2608f43f5c4f2d0209433ffef4fa7ef7 dist.ini
-SHA1 b8f37ab0a2722f87411e9eb038cf00b3facbe446 doap.ttl
+SHA1 0ceba109dea743b98f5aff4aacd025cfb79d31b6 doap.ttl
 SHA1 e905156d50c4731a1797619d0c76382d26674dd7 examples/bench.pl
-SHA1 17da81666e571b29d06a4185c5f94a5b6e8b6a1c lib/MooseX/XSAccessor.pm
-SHA1 ccf88ae55a44e8b9ac3e687594f01623adf61474 lib/MooseX/XSAccessor/Trait/Attribute.pm
+SHA1 28084a7bc77d44149e092403b515ac1cf9b10346 lib/MooseX/XSAccessor.pm
+SHA1 5ee33a2967fd9e05192bd61c84f790e6a6fb9feb lib/MooseX/XSAccessor/Trait/Attribute.pm
 SHA1 43ce0383eef7bf059cb475e46979a531904f2db4 t/01basic.t
 SHA1 353babc996b055918b2e074c31fad0481e7914b9 t/02accel.t
 SHA1 5c090461bbc7106471b8a67cb45cd36efc81f301 t/03funky.t
-SHA1 febe4c6657a47f206cdd839fcb3215e981f43363 t/04chained.t
+SHA1 7ef7e84c1af0e63392b637c179572a6f40f27e03 t/04chained.t
 SHA1 11e13464b3d499ff292e06a1f5850525a6b5ed62 t/05lvalue.t
 SHA1 a5b87ba49becd72e5b62a8f3486881d551ea5812 t/lib/MyMoose.pm
 SHA1 cabd9f91338f8da01c58c9d9efd0abfef005046e t/lib/MyMoose/Role.pm
@@ -58,7 +59,7 @@ SHA1 2cf2b398d84d57814794201e8cc9746cbcd1b117 t/moose_attribute_triggers.t
 SHA1 88d7d5f2c54d793db36affb911ba59932e4ede28 t/moose_attribute_type_unions.t
 SHA1 f4f9abd400f72477ac733984410b3f0936aec409 t/moose_attribute_without_any_methods.t
 SHA1 ce6f7c140387a651b89f84c4964f4ebd51838a48 t/moose_attribute_writer_generation.t
-SHA1 fbc26449966e1168fc66f38b292d31ebe762ef47 t/moose_bad_coerce.t
+SHA1 d4ab773359135cb61ca773ec6be185fd4eff22c8 t/moose_bad_coerce.t
 SHA1 323397c4afacee3370f4bfa16a37d7571e6a12b5 t/moose_chained_coercion.t
 SHA1 26800122026deb83f88b310fc12482c0ecd0990d t/moose_clone_weak.t
 SHA1 e12199444f599fbd908f2de7af5d47cfd5e8bfd6 t/moose_default_class_role_types.t
@@ -71,8 +72,8 @@ SHA1 76496fd5b6aa79f8ac7fdce1bed8563d74f9cbb7 t/moose_inherit_lazy_build.t
 SHA1 b0bef53bda64e7a0105608824fd657c46edbc8d7 t/moose_lazy_no_default.t
 SHA1 1c37206777eb54ea79493bdbd4b2a7402fbe6f5e t/moose_method_generation_rules.t
 SHA1 0d14e0dc89606f4f97c1d16208e2e420c70f4491 t/moose_misc_attribute_coerce_lazy.t
-SHA1 88db8458992ca7acd27a1413125e16b6cf75b552 t/moose_misc_attribute_tests.t
-SHA1 678fce8e6d063453438b6af5c22551d3884af7df t/moose_more_attr_delegation.t
+SHA1 ead202357379f0e8645a0e17f413f4cc06eb7c8a t/moose_misc_attribute_tests.t
+SHA1 06d978619bdd3deb749aa116649ad9777d0680fd t/moose_more_attr_delegation.t
 SHA1 6fbd1af8403a301e38de08fd8664f1469ebf7f03 t/moose_no_init_arg.t
 SHA1 69d286b800be8f96a26278dd939db6ee9dc4ec95 t/moose_no_slot_access.t
 SHA1 0e8b4539e03158d642f66fcd50a4a1ffd004157c t/moose_non_alpha_attr_names.t
@@ -81,7 +82,7 @@ SHA1 0832ab063fe0337dbee3f020e8927f2b0208cfa6 t/moose_trigger_and_coerce.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAlIcYwUACgkQzr+BKGoqfTnhVQCeL9iuAipp1WsUOG//1ucHlcfH
-1msAnRc/xUr/KZk8RA77GGCJts+zZk0S
-=bIDX
+iEYEARECAAYFAlJw5soACgkQzr+BKGoqfTnMOgCcCNBMjugydAwM+70HCpkvaHKm
+LygAnRl10qFu/zdWrl879KkGrQQMWECp
+=pdbN
 -----END PGP SIGNATURE-----
