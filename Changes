@@ -6,6 +6,11 @@ Home page:    <https://metacpan.org/release/MooseX-XSAccessor>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-XSAccessor>
 Maintainer:   Toby Inkster (TOBYINK) <tobyink@cpan.org>
 
+0.007	2013-10-30
+
+ [ Test Suite ]
+ - Skip the new version of moose_bad_coerce.t if Moose version is too old.
+
 0.006	2013-10-30
 
  [ Test Suite ]

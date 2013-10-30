@@ -34,10 +34,10 @@ my $meta = {
                         },
                       },
   "provides"       => {
-                        "MooseX::XSAccessor" => { file => "lib/MooseX/XSAccessor.pm", version => 0.006 },
+                        "MooseX::XSAccessor" => { file => "lib/MooseX/XSAccessor.pm", version => 0.007 },
                         "MooseX::XSAccessor::Trait::Attribute" => {
                           file => "lib/MooseX/XSAccessor/Trait/Attribute.pm",
-                          version => 0.006,
+                          version => 0.007,
                         },
                       },
   "release_status" => "stable",
@@ -53,7 +53,7 @@ my $meta = {
                                         },
                         X_identifier => "http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/project",
                       },
-  "version"        => 0.006,
+  "version"        => 0.007,
   "x_contributors" => ["Florian Ragwitz (FLORA) <flora\@cpan.org>"],
 };
 

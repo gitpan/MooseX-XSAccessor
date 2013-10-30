@@ -48,16 +48,6 @@ Files: t/moose_accessor_context.t
 Copyright: Copyright 2013 Infinity Interactive, Inc.
 License: GPL-1.0+ or Artistic-1.0
 
-Files: lib/MooseX/XSAccessor.pm
- lib/MooseX/XSAccessor/Trait/Attribute.pm
- t/01basic.t
- t/02accel.t
- t/03funky.t
- t/04chained.t
- t/05lvalue.t
-Copyright: This software is copyright (c) 2013 by Toby Inkster.
-License: GPL-1.0+ or Artistic-1.0
-
 Files: CONTRIBUTING
  CREDITS
  Changes
@@ -66,6 +56,16 @@ Files: CONTRIBUTING
  README
  doap.ttl
 Copyright: Copyright 1970 Toby Inkster.
+License: GPL-1.0+ or Artistic-1.0
+
+Files: lib/MooseX/XSAccessor.pm
+ lib/MooseX/XSAccessor/Trait/Attribute.pm
+ t/01basic.t
+ t/02accel.t
+ t/03funky.t
+ t/04chained.t
+ t/05lvalue.t
+Copyright: This software is copyright (c) 2013 by Toby Inkster.
 License: GPL-1.0+ or Artistic-1.0
 
 Files: META.json

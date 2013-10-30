@@ -44,7 +44,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "MooseX-XSAccessor";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_01>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_02>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-006>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_01>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-000_02>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-001>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-002>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-003>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-004>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-005>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-006>, <http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-007>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-moosex-xsaccessor>;
@@ -180,6 +180,20 @@
 	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooseX-XSAccessor-0.006.tar.gz>;
 	doap:revision        "0.006"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/MooseX-XSAccessor/v_0-007>
+	a                    doap:Version;
+	dc:identifier        "MooseX-XSAccessor-0.007"^^xsd:string;
+	dc:issued            "2013-10-30"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Tests;
+			rdfs:label "Skip the new version of moose_bad_coerce.t if Moose version is too old.";
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/MooseX-XSAccessor-0.007.tar.gz>;
+	doap:revision        "0.007"^^xsd:string.
 
 <http://purl.org/NET/cpan-uri/person/flora>
 	a                    foaf:Person;
